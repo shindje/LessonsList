@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LessonsList</string>
+    <string name="title_home">Home</string>
+    <string name="title_classes">Classes</string>
+    <string name="title_somelist">Some List</string>
+    <string name="title_fav">Favourites</string>
+</resources>
