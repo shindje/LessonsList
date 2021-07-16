@@ -50,5 +50,11 @@ class HomeFragment : Fragment() {
         if (currentClassIndex > - 1)
             rv_classes_horizontal.scrollToPosition(currentClassIndex)
         tv_classes_today.text = "${classes.size} classes today"
+
+        rv_homeworks.layoutManager = LinearLayoutManager(activity, RecyclerView.HORIZONTAL, false)
+        var homeworks = repository.getHomeworks()
+        var adapterHW = RVHomeworksAdapter(homeworks)
+        rv_homeworks.adapter = adapterHW
+
     }
 }
