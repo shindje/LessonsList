@@ -5,4 +5,7 @@ data class Class(val name: String,
                  val startMinute: Int,
                  val endHour: Int,
                  val endMinute: Int,
-                 val icon: Int)
+                 val icon: Int,
+                 val teacher: String = "",
+                 val text: String = "",
+                 val isFaculty: Boolean = false)

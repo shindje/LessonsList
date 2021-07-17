@@ -8,7 +8,7 @@ import com.example.lessonslist.R
 import com.example.lessonslist.data.model.Class
 import kotlinx.android.synthetic.main.rv_class_item_horizontal.view.*
 
-class RVClassesAdapter (private val classes: List<Class>) : RecyclerView.Adapter<RVClassesAdapter.DataViewHolder>() {
+class RVClassesAdapterH (private val classes: List<Class>) : RecyclerView.Adapter<RVClassesAdapterH.DataViewHolder>() {
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

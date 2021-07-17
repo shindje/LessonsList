@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/purple_500"
+    android:layout_width="250dp"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_homework_name"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="14dp"
+            tools:text = "Literature"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/item_homework_icon_time"
+            android:src="@drawable/ic_baseline_schedule_24"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_homework_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_homework_deadline"
+            tools:text = "2 days left"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@id/item_homework_icon_time"
+            app:layout_constraintTop_toBottomOf="@+id/item_homework_name" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="14dp"
+            android:id="@+id/item_homework_icon"
+            tools:src = "@drawable/ic_baseline_lightbulb_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_howework_task"
+            tools:text = "Read scenes 1.1 - 1.2 of The Master and Margarita"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginBottom="14dp"
+            app:layout_constraintTop_toBottomOf="@id/item_homework_icon"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

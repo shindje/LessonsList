@@ -214,4 +214,24 @@
         android:id="@+id/rv_classes_horizontal"
         app:layout_constraintTop_toBottomOf="@id/label_classes" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/label_homeworks"
+        android:text="@string/title_homeworks"
+        android:textSize="@dimen/text_middle"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_classes_horizontal" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/rv_homeworks"
+        app:layout_constraintTop_toBottomOf="@id/label_homeworks" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
