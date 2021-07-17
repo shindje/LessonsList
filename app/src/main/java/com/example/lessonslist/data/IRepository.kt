@@ -7,4 +7,5 @@ interface IRepository {
     fun getClasses(): List<Class>
     fun getCurrentClassIndex(): Int
     fun getHomeworks(): List<Homework>
+    fun getClassesAndFaculties(): List<Class>
 }

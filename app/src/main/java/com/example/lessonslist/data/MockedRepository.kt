@@ -18,9 +18,9 @@ class MockedRepository: IRepository {
         curDateAdd5 = curDate.time
     }
 
-    val mockClasses = mutableListOf<Class>(
-        Class("History", 8, 0, 8, 45, R.drawable.ic_bow_and_arrow),
-        Class("Literature", 9, 0, 9, 45, R.drawable.ic_baseline_book_24),
+    val mockClasses = listOf(
+        Class("History", 8, 0, 8, 45, R.drawable.ic_bow_and_arrow, "Mrs Thomas"),
+        Class("Literature", 9, 0, 9, 45, R.drawable.ic_baseline_book_24, "Mrs Barros"),
         Class("History", 13, 0, 13, 45, R.drawable.ic_bow_and_arrow),
         Class("Literature", 15, 0, 15, 45, R.drawable.ic_baseline_book_24),
         Class("History", 17, 0, 17, 45, R.drawable.ic_bow_and_arrow),
@@ -29,9 +29,14 @@ class MockedRepository: IRepository {
         Class("Literature", 23, 0, 23, 45, R.drawable.ic_baseline_book_24)
     )
 
-    val mockHomeworks = mutableListOf<Homework>(
+    val mockHomeworks = listOf(
         Homework("Literature", curDateAdd2, "Read scenes 1.1 - 1.2 of The Master and Margarita", R.drawable.ic_baseline_book_24),
         Homework("Physics", curDateAdd5, "Learn Newton's laws of motion", R.drawable.ic_baseline_lightbulb_24),
+    )
+
+    val mockFaculties = listOf(
+        Class("Physical Education", 10, 0, 11, 35, R.drawable.ic_baseline_sports_basketball_24,
+                "Mr Barros","Intensive preparation for The Junior World Championship in Los Angeles", true),
     )
 
 
@@ -55,4 +60,14 @@ class MockedRepository: IRepository {
     }
 
     override fun getHomeworks(): List<Homework> = mockHomeworks
+    override fun getClassesAndFaculties(): List<Class> {
+        val cf = mutableListOf<Class>()
+        cf.addAll(mockClasses)
+        cf.addAll(mockFaculties)
+        cf.sortWith { c1, c2 ->
+            (c1.startHour * 60 + c1.startMinute) - (c2.startHour * 60 + c2.startMinute)
+        }
+        return cf
+    }
+
 }
